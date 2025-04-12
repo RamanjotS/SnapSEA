@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-  </head>
-
-  <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer">
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
-    </div>
-  </body>
+<html lang="en-US">
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Stock Data</h1>
+  <select id="dropDown">
+    <option value="default">Select an option</option>
+    <option value="nameAZ">Sort by name (A-Z)</option>
+    <option value="nameZA">Sort by name (Z-A)</option>
+    <option value="priceAsc">Sort by price (ascending)</option>
+    <option value="priceDesc">Sort by price (descending)</option>
+  </select>
+  <input type="text" id="search" placeholder="Search for a stock...">
+  <ul id="stockList"></ul>
+  <button id="addStockFormButton">Add New Stock</button>
+  <div id="addStockForm" style="display: none;">
+    <input type="text" id="newTicker" placeholder="Example: SNAP">
+    <input type="text" id="newName" placeholder="Example: Snapchat">
+    <input type="number" id="newPrice" placeholder="Example: 123.45">
+    <input type="number" id="newChange" placeholder="Example: 0.12">
+    <button id="submitButton">Submit</button>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
